@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #e7f0ff;
+  background: #07111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #122940 0%, #07111f 60%);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 18px;
+  background: #42e8d2;
+  color: #06131e;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+a {
+  color: #42e8d2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card, .panel {
+  background: rgba(13, 28, 45, 0.92);
+  border: 1px solid #243b51;
+  border-radius: 18px;
+  box-shadow: 0 16px 60px #0004;
+}
+
+.auth-card {
+  width: min(100%, 430px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1, h2, .brand {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.eyebrow {
+  color: #42e8d2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.muted {
+  color: #93a7bc;
+  line-height: 1.6;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: #c4d5e8;
+}
+
+input, select, textarea {
+  width: 100%;
+  color: #e7f0ff;
+  background: #081725;
+  border: 1px solid #2b4358;
+  border-radius: 9px;
+  padding: 12px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #42e8d2;
+  box-shadow: 0 0 0 3px #42e8d21a;
+}
+
+.message {
+  color: #42e8d2;
+  overflow-wrap: anywhere;
+}
+
+.dashboard {
+  width: min(1100px, 100%);
+  margin: auto;
+  padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 28px;
+}
+
+.brand {
+  color: #e7f0ff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.brand span {
+  color: #42e8d2;
+}
+
+.secondary {
+  background: transparent;
+  color: #e7f0ff;
+  border: 1px solid #2b4358;
+}
+
+.welcome {
+  padding: 28px 0;
+}
+
+.panel {
+  padding: 24px;
+  margin: 20px 0;
+}
+
+.health-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.health-form button {
+  justify-self: start;
+}
+
+.update-item {
+  border-top: 1px solid #243b51;
+  padding: 16px 0;
+  overflow-wrap: anywhere;
+}
+
+.update-item p {
+  color: #b6c8da;
+  line-height: 1.6;
+}
+
+.loading {
+  padding: 60px 20px;
+  text-align: center;
+  color: #42e8d2;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .auth-card, .panel {
+    padding: 20px;
+  }
+
+  .health-form {
+    grid-template-columns: 1fr;
+  }
+}
